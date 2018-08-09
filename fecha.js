@@ -210,7 +210,7 @@
 
   // Some common format strings
   fecha.masks = {
-    default: 'ddd MMM DD YYYY HH:mm:ss',
+    default_setting: 'ddd MMM DD YYYY HH:mm:ss',
     shortDate: 'M/D/YY',
     mediumDate: 'MMM D, YYYY',
     longDate: 'MMMM D, YYYY',
@@ -237,7 +237,7 @@
       throw new Error('Invalid Date in fecha.format');
     }
 
-    mask = fecha.masks[mask] || mask || fecha.masks['default'];
+    mask = fecha.masks[mask] || mask || fecha.masks['default_setting'];
 
     var literals = [];
 
